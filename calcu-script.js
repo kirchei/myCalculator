@@ -7,8 +7,16 @@ let arr = Array.from(buttons);
 arr.forEach((button) => {
   button.addEventListener("click", (e) => {
     if (e.target.innerHTML == "=") {
-      string = eval(string);
-      input.value = string;
+      try {
+        string = eval(string);
+        if (!isFinite(string)) {
+          throw "Invalid expression";
+        }
+        input.value = string;
+      } catch (error) {
+        input.value = "Error";
+        string = "";
+      }
     } else if (e.target.innerHTML == "AC") {
       string = "";
       input.value = string;
