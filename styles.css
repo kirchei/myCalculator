@@ -17,6 +17,11 @@ body {
     background-color: #1f1f1f
 }
 
+.footer {
+    padding-top: 10px;
+    width: 100%;
+}
+
 .calculator{
     border: 3px solid #fdfdfd;
     padding: 20px;
@@ -68,9 +73,9 @@ button{
     font-weight: 600;
 }
 
-
-.footer{
+.footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
