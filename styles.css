@@ -7,29 +7,31 @@
     box-sizing: border-box;
 }
 
-
 body {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #1f1f1f
+    background-color: #1f1f1f;
+    position: relative;
 }
 
-.footer {
-    padding-top: 10px;
-    width: 100%;
+.header{
+    margin-bottom: 80px;
+    color:white;
+    font-size: 30px;
 }
 
-.calculator{
+.calculator {
     border: 3px solid #fdfdfd;
     padding: 20px;
     border-radius: 16px;
-    background-color:#36393e
+    background-color: #36393e;
 }
 
-input{
+input {
     width: 320px;
     border: none;
     padding: 24px;
@@ -41,11 +43,11 @@ input{
     cursor: pointer;
 }
 
-input::placeholder{
+input::placeholder {
     color: #000000;
 }
 
-button{
+button {
     border: none;
     width: 60px;
     height: 60px;
@@ -58,24 +60,24 @@ button{
     font-weight: 500;
 }
 
-.equalBtn{
-    background-color: #00A86B;
-    color: white
+.equalBtn {
+    background-color: #00a86b;
+    color: white;
 }
 
-.operator{
-    color: #00A86B;
+.operator {
+    color: #00a86b;
     font-weight: 600;
 }
 
-.delete{
-    color: #A8003D;
+.delete {
+    color: #a8003d;
     font-weight: 600;
 }
 
 .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    margin-top: auto;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
