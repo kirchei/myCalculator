@@ -1,35 +1,23 @@
-let userInput = document.getElementById('displayInput');
-let buttons = document.querySelectorAll('button');
+let input = document.getElementById("inputBox");
+let buttons = document.querySelectorAll("button");
 
 let string = "";
+let arr = Array.from(buttons);
 
-let appendText = Array.from(buttons);
-
-// I LOVE CATS
-
-appendText.forEach(button => {
-    button.addEventListener('click', (e) => {
-        switch (e.target.innerHTML) {
-            case '=':
-                string = eval(string);
-                userInput.value = string;
-                break;
-            case 'AC':
-                string = "";
-                userInput.value = string;
-                break;
-            case 'รท':
-                string += '/';
-                userInput.value = string;
-                break;
-            case 'x':
-                string += '*';
-                userInput.value = string;
-                break;
-            default:
-                string += e.target.innerHTML;
-                userInput.value = string;
-                break;
-        }
-    });
+arr.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    if (e.target.innerHTML == "=") {
+      string = eval(string);
+      input.value = string;
+    } else if (e.target.innerHTML == "AC") {
+      string = "";
+      input.value = string;
+    } else if (e.target.innerHTML == "DEL") {
+      string = string.substring(0, string.length - 1);
+      input.value = string;
+    } else {
+      string += e.target.innerHTML;
+      input.value = string;
+    }
+  });
 });
