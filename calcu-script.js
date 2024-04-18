@@ -5,6 +5,8 @@ let string = "";
 
 let appendText = Array.from(buttons);
 
+// I LOVE CATS
+
 appendText.forEach(button => {
     button.addEventListener('click', (e) => {
         switch (e.target.innerHTML) {
