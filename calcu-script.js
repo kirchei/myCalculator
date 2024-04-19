@@ -9,9 +9,6 @@ arr.forEach((button) => {
     if (e.target.innerHTML == "=") {
       try {
         string = eval(string);
-        if (!isFinite(string)) {
-          throw "Invalid expression";
-        }
         input.value = string;
       } catch (error) {
         input.value = "Error";
